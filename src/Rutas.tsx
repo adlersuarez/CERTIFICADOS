@@ -3,6 +3,7 @@ import NotFound from './view/pages/404/NotFound';
 import FormularioEntrada from './view/formulario/FormularioEntrada';
 import VistaPrincipal from './view/formulario/VistaPrincipal';
 import Certificado from './view/certificado/Certificado';
+import { JobBoard } from './view/practicas/VistaPracticas';
 
 const router = createBrowserRouter([
   {
@@ -32,12 +33,16 @@ const router = createBrowserRouter([
     element: <VistaPrincipal />
   },
   {
+    path: 'estudiante-practicas',
+    element: <JobBoard />
+  },
+  {
     path: '*',
     element: <NotFound />
   },
   {
     path: '/',
-    element: <Navigate to="certificado" replace />,
+    element: <Navigate to="estudiante-practicas" replace />,
   },
 ])
 
